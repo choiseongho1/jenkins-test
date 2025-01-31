@@ -15,7 +15,7 @@ public class TestController {
     @GetMapping
     public String test() {
         System.out.println("lllllllllllllllllllllllllllllloooooooooooooooooooooooooooooooooooooooogggggggggggggggggggggggggggggggg");
-        return "test";
+        return "lllllllllllllllllllllllllllllloooooooooooooooooooooooooooooooooooooooogggggggggggggggggggggggggggggggg";
     }
 
 }
