@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @fileName : TestController.java
  * @since : 2025-01-24
  */
-@RestController("/test")
+@RestController
 public class TestController {
     @GetMapping
     public String test() {
