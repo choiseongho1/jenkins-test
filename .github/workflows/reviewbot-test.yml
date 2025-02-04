@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Call ReviewBot Webhook
         run: |
-          curl -X POST " https://62dc-112-221-79-74.ngrok-free.app/api/webhook" \
+          curl -X POST "https://62dc-112-221-79-74.ngrok-free.app/api/webhook" \
                -H "Content-Type: application/json" \
                -d '{
                  "repository": "${{ github.repository }}",
