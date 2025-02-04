@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
     @GetMapping
     public String test() {
-        System.out.println("lllllllllllllllllllllllllllllloooooooooooooooooooooooooooooooooooooooogggggggggggggggggggggggggggggggg");
+        System.out.println("22222222222222222222222222222222222222");
         return "lllllllllllllllllllllllllllllloooooooooooooooooooooooooooooooooooooooogggggggggggggggggggggggggggggggg";
     }
 
