@@ -1,0 +1,20 @@
+name: Test ReviewBot
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  reviewbot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Run ReviewBot
+        uses: choiseongho1/ReviewBot@main
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          sonar_token: ${{ secrets.SONARQUBE_TOKEN }}
