@@ -5,10 +5,6 @@ on:
     branches:
       - main
 
-  push:
-    branches:
-      - main
-
 jobs:
   trigger-reviewbot:
     runs-on: ubuntu-latest
@@ -17,10 +13,4 @@ jobs:
         run: |
           curl -X POST "http://43.203.251.245:8080/api/webhook" \
                -H "Content-Type: application/json" \
-               -d '{
-                 "repository": "${{ github.repository }}",
-                 "pull_request": {
-                   "number": "${{ github.event.pull_request.number }}",
-                   "diff_url": "${{ github.event.pull_request.diff_url }}"
-                 }
-               }'
+               -d '${{ toJson(github.event) }}'
