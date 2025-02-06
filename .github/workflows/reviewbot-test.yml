@@ -11,6 +11,6 @@ jobs:
     steps:
       - name: Call ReviewBot Webhook
         run: |
-          curl -X POST "http://43.203.251.245:8080/api/webhook" \
+          curl -X POST "http://13.125.171.105:8080/api/webhook" \
                -H "Content-Type: application/json" \
                -d '${{ toJson(github.event) }}'
